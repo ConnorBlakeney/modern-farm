@@ -1,33 +1,41 @@
 import { createPlan } from "./plan.js"
-import { createAsparagus } from "./seeds/asparagus.js"
-import { createCorn } from "./seeds/corn.js"
-import { createPotato } from "./seeds/potato.js"
-import { createSoybean } from "./seeds/soybean.js"
-import { createSunflower } from "./seeds/sunflower.js"
-import { createWheat } from "./seeds/wheat.js"
+import { Asparagus } from "./seeds/asparagus.js"
+import { Corn } from "./seeds/corn.js"
+import { Potato } from "./seeds/potato.js"
+import { Soybean } from "./seeds/soybean.js"
+import { Sunflower } from "./seeds/sunflower.js"
+import { Wheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
 
 /* planArray will be an array. 
 will need to use nested loops to iterate over every plant.
 can use if/else if statements or a switch */
 
-export const plantSeeds = (planArray) => {
-  for (const fieldObj of planArray) {
-    for (const plantObj of fieldObj) {
-      switch (plantObj) {
+export const plantSeeds = (plan) => {
+  plan.forEach((row) => {
+    row.forEach((plantType) => {
+      switch (plantType) {
         case "Asparagus":
-          addPlant(createAsparagus())
+          addPlant(Asparagus)
+          break
         case "Corn":
-          addPlant(createCorn())
+          addPlant(Corn)
+          break
         case "Potato":
-          addPlant(createPotato())
+          addPlant(Potato)
+          break
         case "Soybean":
-          addPlant(createSoybean())
+          addPlant(Soybean)
+          break
         case "Sunflower":
-          addPlant(createSunflower())
+          addPlant(Sunflower)
+          break
         case "Wheat":
-          addPlant(createWheat())
+          addPlant(Wheat)
+          break
+        default:
+          break
       }
-    }
-  }
+    })
+  })
 }
