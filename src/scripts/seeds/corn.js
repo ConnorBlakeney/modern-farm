@@ -12,3 +12,5 @@ export const createCorn = () => {
     },
   ]
 }
+
+export const Corn = createCorn()

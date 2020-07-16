@@ -5,3 +5,5 @@ export const createWheat = () => {
     output: 6,
   }
 }
+
+export const Wheat = createWheat()
