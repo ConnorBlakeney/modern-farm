@@ -5,3 +5,5 @@ export const createAsparagus = () => {
     output: 4,
   }
 }
+
+export const Asparagus = createAsparagus()

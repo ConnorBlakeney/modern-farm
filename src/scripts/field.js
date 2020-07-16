@@ -1,4 +1,4 @@
-let growingPlants = []
+export let growingPlants = []
 
 export const addPlant = (seedObj) => {
   if (Array.isArray(seedObj)) {

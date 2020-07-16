@@ -5,3 +5,5 @@ export const createSoybean = () => {
     output: 4,
   }
 }
+
+export const Soybean = createSoybean()
