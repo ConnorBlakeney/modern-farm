@@ -1,5 +1,9 @@
-const Plant = (plant) => `<section class="plant">${plant.type}</section>`
+export const Catalog = (harvestedArray) => {
+  const contentElement = document.querySelector(".container")
 
-export const Catalog = (plants) => {
-  document.querySelectorAll(".container").innerHTML = plants.map(Plant).join("")
+  for (const harvestedObj of harvestedArray) {
+    contentElement.innerHTML += `
+        <section class="plant">${harvestedObj.type}</section>
+        `
+  }
 }
