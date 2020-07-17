@@ -1,6 +1,6 @@
-export const harvestPlants = (allPlants) => {
-  const foodToSell = []
+const foodToSell = []
 
+export const harvestPlants = (allPlants) => {
   allPlants.forEach((plant) => {
     let output = plant.output
 
